@@ -7,7 +7,7 @@ contract ERC20Token {
     mapping(address => uint) public balances;
 
     function mint() public {
-        balances[tx.origin] ++; // cada vez que compre un token se le va a aumentar al balance de la address que hizo la compra
+        balances[tx.origin] ++; // tx.origin es la persona que originó la transacción
     }
 }
 
